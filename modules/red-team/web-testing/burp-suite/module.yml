@@ -1,0 +1,14 @@
+id: "red-team/web-testing/burp-suite"
+name: "Burp Suite Community"
+description: "Web application security testing platform"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - jdk-openjdk
+aur_packages:
+  - burpsuite
+commands: []
+files: {}

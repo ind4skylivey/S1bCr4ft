@@ -1,0 +1,34 @@
+id: "linux-optimization/terminal-config/tmux-config"
+name: "Tmux Terminal Multiplexer"
+description: "Tmux with TPM (Tmux Plugin Manager) and custom configuration"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - tmux
+aur_packages: []
+commands:
+  - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+files:
+  ~/.tmux.conf: |
+    # Set prefix to Ctrl-a
+    unbind C-b
+    set-option -g prefix C-a
+    bind-key C-a send-prefix
+
+    # Enable mouse support
+    set -g mouse on
+
+    # Start windows and panes at 1
+    set -g base-index 1
+    setw -g pane-base-index 1
+
+    # TPM plugins
+    set -g @plugin 'tmux-plugins/tpm'
+    set -g @plugin 'tmux-plugins/tmux-sensible'
+    set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+    # Initialize TPM
+    run '~/.tmux/plugins/tpm/tpm'

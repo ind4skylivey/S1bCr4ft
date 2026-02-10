@@ -1,0 +1,32 @@
+version: "1.0"
+name: "red-team-workstation"
+description: "Complete C2 + exploitation framework setup"
+
+modules:
+  - core/base-system
+  - security/hardening/kernel-hardening
+  - development/languages/rust
+  - red-team/reconnaissance/nmap-masscan
+  - red-team/exploitation/metasploit-framework
+  - linux-optimization/terminal-config/zsh
+
+dotfiles:
+  - source: "./payloads/"
+    target: "~/.s1bcr4ft/payloads/"
+  - source: "./scripts/"
+    target: "~/.local/bin/"
+
+hooks:
+  post_sync: |
+    print("Red team setup complete!")
+    print("Initializing C2 frameworks...")
+
+options:
+  auto_backup: true
+  dry_run: false
+  parallel_install: true
+
+security:
+  isolation_level: "high"
+  network_isolation: false
+  gpg_signing: true

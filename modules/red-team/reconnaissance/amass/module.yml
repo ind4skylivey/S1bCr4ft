@@ -1,0 +1,13 @@
+id: "red-team/reconnaissance/amass"
+name: "OWASP Amass"
+description: "In-depth attack surface mapping and asset discovery"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages: []
+aur_packages:
+  - amass
+commands: []
+files: {}

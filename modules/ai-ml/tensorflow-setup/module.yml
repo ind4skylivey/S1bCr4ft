@@ -1,0 +1,15 @@
+id: "ai-ml/tensorflow-setup"
+name: "TensorFlow Deep Learning"
+description: "TensorFlow framework with GPU support"
+category: "ai-ml"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+  - ai-ml/cuda-toolkit
+conflicts: []
+packages:
+  - python-tensorflow-cuda
+  - python-pip
+aur_packages: []
+commands: []
+files: {}

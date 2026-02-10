@@ -1,0 +1,17 @@
+id: "red-team/c2-frameworks/sliver-c2"
+name: "Sliver C2 Framework"
+description: "Modern cross-platform adversary emulation framework"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+  - development/languages/rust
+conflicts: []
+packages:
+  - mingw-w64-gcc
+aur_packages:
+  - sliver-server
+  - sliver-client
+commands:
+  - systemctl enable sliver
+files: {}

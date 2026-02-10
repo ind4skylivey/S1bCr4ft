@@ -1,0 +1,22 @@
+id: "linux-optimization/terminal-config/nvim-config"
+name: "Neovim Modern Setup"
+description: "Neovim with LazyVim and LSP support"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+  - development/languages/rust
+conflicts: []
+packages:
+  - neovim
+  - ripgrep
+  - fd
+  - nodejs
+  - npm
+  - python-pip
+aur_packages:
+  - lazygit
+commands:
+  - git clone https://github.com/LazyVim/starter ~/.config/nvim
+  - nvim --headless "+Lazy! sync" +qa
+files: {}

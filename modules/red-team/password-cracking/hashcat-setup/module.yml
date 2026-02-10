@@ -1,0 +1,16 @@
+id: "red-team/password-cracking/hashcat-setup"
+name: "Hashcat Password Cracker"
+description: "World's fastest password cracker with GPU support"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - hashcat
+  - opencl-nvidia
+  - cuda
+aur_packages:
+  - hashcat-utils
+commands: []
+files: {}

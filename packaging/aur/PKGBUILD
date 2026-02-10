@@ -1,0 +1,49 @@
+# Maintainer: S1BGr0up <contact@s1bgroup.dev>
+pkgname=s1bcr4ft
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Declarative system configuration framework for Arch Linux"
+arch=('x86_64')
+url="https://github.com/S1b-Team/S1bCr4ft"
+license=('GPL3')
+depends=('pacman')
+optdepends=(
+    'paru: AUR package support'
+    'yay: AUR package support (alternative)'
+    'lua: Lua hooks support'
+    'gpgme: GPG signing support'
+)
+makedepends=('rust' 'cargo')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/S1b-Team/S1bCr4ft/archive/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+    cd "$pkgname-$pkgver"
+    cargo build --release --locked --all-features
+}
+
+check() {
+    cd "$pkgname-$pkgver"
+    cargo test --release --locked
+}
+
+package() {
+    cd "$pkgname-$pkgver"
+
+    # Install binaries
+    install -Dm755 "target/release/s1bcr4ft" "$pkgdir/usr/bin/s1bcr4ft"
+    install -Dm755 "target/release/s1bcr4ft-tui" "$pkgdir/usr/bin/s1bcr4ft-tui"
+    install -Dm755 "target/release/s1bcr4ft-api" "$pkgdir/usr/bin/s1bcr4ft-api"
+
+    # Install modules
+    install -dm755 "$pkgdir/usr/share/s1bcr4ft/modules"
+    cp -r modules/* "$pkgdir/usr/share/s1bcr4ft/modules/"
+
+    # Install examples
+    install -dm755 "$pkgdir/usr/share/s1bcr4ft/examples"
+    cp -r examples/* "$pkgdir/usr/share/s1bcr4ft/examples/"
+
+    # Install documentation
+    install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

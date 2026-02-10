@@ -1,0 +1,15 @@
+id: "linux-optimization/display-managers/ly-config"
+name: "Ly Display Manager"
+description: "Lightweight TUI display manager"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts:
+  - linux-optimization/display-managers/lightdm-config
+packages: []
+aur_packages:
+  - ly
+commands:
+  - systemctl enable ly.service
+files: {}

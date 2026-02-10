@@ -1,0 +1,15 @@
+id: "red-team/social-engineering/set-toolkit"
+name: "Social Engineering Toolkit"
+description: "Framework for social engineering attacks"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - python
+  - python-pip
+aur_packages:
+  - set
+commands: []
+files: {}

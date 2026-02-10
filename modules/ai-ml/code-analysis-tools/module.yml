@@ -1,0 +1,16 @@
+id: "ai-ml/code-analysis-tools"
+name: "AI Code Analysis Tools"
+description: "CodeQL, Semgrep for security code analysis"
+category: "ai-ml"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - semgrep
+  - python
+  - python-pip
+aur_packages:
+  - codeql
+commands: []
+files: {}

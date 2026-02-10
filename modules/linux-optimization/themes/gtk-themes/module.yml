@@ -1,0 +1,18 @@
+id: "linux-optimization/themes/gtk-themes"
+name: "GTK Themes Collection"
+description: "Popular GTK3/GTK4 themes and icon packs"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - arc-gtk-theme
+  - papirus-icon-theme
+  - breeze
+  - breeze-gtk
+aur_packages:
+  - catppuccin-gtk-theme-mocha
+  - nordic-theme
+commands: []
+files: {}

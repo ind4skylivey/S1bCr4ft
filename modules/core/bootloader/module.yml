@@ -1,0 +1,17 @@
+id: "core/bootloader"
+name: "GRUB Bootloader"
+description: "GRUB bootloader with secure boot support"
+category: "core"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - grub
+  - efibootmgr
+  - os-prober
+aur_packages: []
+commands:
+  - grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+  - grub-mkconfig -o /boot/grub/grub.cfg
+files: {}

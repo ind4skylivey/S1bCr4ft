@@ -1,0 +1,18 @@
+id: "linux-optimization/terminal-config/zsh"
+name: "Zsh Configuration"
+description: "Zsh with Oh My Zsh and plugins"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - zsh
+  - zsh-completions
+  - zsh-syntax-highlighting
+  - zsh-autosuggestions
+aur_packages:
+  - oh-my-zsh-git
+commands:
+  - chsh -s /bin/zsh
+files: {}

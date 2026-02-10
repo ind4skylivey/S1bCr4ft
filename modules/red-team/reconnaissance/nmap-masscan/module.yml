@@ -1,0 +1,16 @@
+id: "red-team/reconnaissance/nmap-masscan"
+name: "Nmap & Masscan"
+description: "Network scanning and reconnaissance tools"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - nmap
+  - masscan
+  - rustscan
+aur_packages:
+  - nmap-parse-output
+commands: []
+files: {}

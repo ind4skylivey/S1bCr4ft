@@ -1,0 +1,14 @@
+id: "linux-optimization/dotfiles/stow-manager"
+name: "GNU Stow Dotfiles Manager"
+description: "Symlink manager for dotfiles organization"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - stow
+aur_packages: []
+commands:
+  - mkdir -p ~/.dotfiles
+files: {}

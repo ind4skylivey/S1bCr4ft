@@ -1,0 +1,18 @@
+id: "development/tools/docker-podman"
+name: "Docker & Podman"
+description: "Container runtime environments"
+category: "development"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - docker
+  - docker-compose
+  - podman
+  - podman-compose
+aur_packages: []
+commands:
+  - systemctl enable docker
+  - usermod -aG docker $USER
+files: {}

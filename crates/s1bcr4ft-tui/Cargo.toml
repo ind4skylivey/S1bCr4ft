@@ -1,0 +1,30 @@
+[package]
+name = "s1bcr4ft-tui"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Terminal User Interface for S1bCr4ft"
+
+[[bin]]
+name = "s1bcr4ft-tui"
+path = "src/main.rs"
+
+[dependencies]
+# Workspace dependencies
+ratatui = { workspace = true }
+crossterm = { workspace = true }
+anyhow = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true }
+
+# Inter-crate dependencies
+s1bcr4ft-core = { path = "../s1bcr4ft-core" }
+
+# TUI-specific dependencies
+tui-textarea = "0.4"
+
+[features]
+default = []

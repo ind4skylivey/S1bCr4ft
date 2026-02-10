@@ -1,0 +1,34 @@
+id: "linux-optimization/system-tools/cli-utilities"
+name: "Essential CLI Utilities"
+description: "Modern replacements for classic Unix tools"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - bat
+  - exa
+  - ripgrep
+  - fd
+  - fzf
+  - htop
+  - btop
+  - neofetch
+  - tree
+  - jq
+  - tldr
+aur_packages:
+  - lsd
+  - dust
+  - duf
+  - procs
+commands: []
+files:
+  ~/.bashrc: |
+    # Modern CLI aliases
+    alias ls='exa --icons'
+    alias cat='bat'
+    alias find='fd'
+    alias grep='rg'
+    alias top='btop'

@@ -1,0 +1,30 @@
+id: "linux-optimization/window-managers/dwm-config"
+name: "DWM (Dynamic Window Manager)"
+description: "Suckless DWM with patches and custom configuration"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts:
+  - linux-optimization/window-managers/i3-config
+  - linux-optimization/window-managers/hyprland-config
+  - linux-optimization/window-managers/bspwm-config
+packages:
+  - xorg-server
+  - xorg-xinit
+  - libx11
+  - libxft
+  - libxinerama
+aur_packages:
+  - dwm
+  - dmenu
+  - st
+commands:
+  - echo "exec dwm" > ~/.xinitrc
+files:
+  /etc/X11/xorg.conf.d/20-intel.conf: |
+    Section "Device"
+      Identifier "Intel Graphics"
+      Driver "intel"
+      Option "TearFree" "true"
+    EndSection

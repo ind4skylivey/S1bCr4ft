@@ -1,0 +1,15 @@
+id: "red-team/reconnaissance/recon-ng"
+name: "Recon-ng Framework"
+description: "Full-featured reconnaissance framework"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - recon-ng
+  - python
+  - python-pip
+aur_packages: []
+commands: []
+files: {}

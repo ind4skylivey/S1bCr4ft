@@ -1,0 +1,14 @@
+id: "red-team/web-testing/owasp-zap"
+name: "OWASP ZAP"
+description: "Open-source web application security scanner"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - zaproxy
+  - jdk-openjdk
+aur_packages: []
+commands: []
+files: {}

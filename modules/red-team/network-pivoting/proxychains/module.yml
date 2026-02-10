@@ -1,0 +1,21 @@
+id: "red-team/network-pivoting/proxychains"
+name: "ProxyChains"
+description: "Force applications through proxy chains"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - proxychains-ng
+aur_packages: []
+commands: []
+files:
+  /etc/proxychains.conf: |
+    strict_chain
+    proxy_dns
+    tcp_read_time_out 15000
+    tcp_connect_time_out 8000
+    [ProxyList]
+    # Add your proxies here
+    # socks5 127.0.0.1 9050

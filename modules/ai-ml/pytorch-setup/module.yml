@@ -1,0 +1,17 @@
+id: "ai-ml/pytorch-setup"
+name: "PyTorch Deep Learning"
+description: "PyTorch framework with CUDA support"
+category: "ai-ml"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+  - ai-ml/cuda-toolkit
+conflicts: []
+packages:
+  - python-pytorch-cuda
+  - python-torchvision-cuda
+  - python-torchaudio-cuda
+  - python-pip
+aur_packages: []
+commands: []
+files: {}

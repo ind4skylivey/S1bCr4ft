@@ -1,0 +1,14 @@
+id: "linux-optimization/browsers/firefox-hardened"
+name: "Firefox Hardened"
+description: "Firefox with privacy and security enhancements"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - firefox
+aur_packages: []
+commands:
+  - mkdir -p ~/.mozilla/firefox
+files: {}

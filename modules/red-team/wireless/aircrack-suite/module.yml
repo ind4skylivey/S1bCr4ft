@@ -1,0 +1,17 @@
+id: "red-team/wireless/aircrack-suite"
+name: "Aircrack-ng Suite"
+description: "Complete suite for WiFi security auditing"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - aircrack-ng
+  - wireless_tools
+  - iw
+  - macchanger
+aur_packages:
+  - wifite
+commands: []
+files: {}

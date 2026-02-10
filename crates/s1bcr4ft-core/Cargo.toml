@@ -1,0 +1,47 @@
+[package]
+name = "s1bcr4ft-core"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Core engine for S1bCr4ft - YAML parsing, module resolution, package management"
+
+[dependencies]
+# Workspace dependencies
+serde = { workspace = true }
+serde_yaml = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+log = { workspace = true }
+mlua = { workspace = true, optional = true }
+gpgme = { workspace = true, optional = true }
+sha2 = { workspace = true }
+age = { workspace = true, optional = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+walkdir = { workspace = true }
+regex = { workspace = true }
+toml = { workspace = true }
+
+# Core-specific dependencies
+petgraph = "0.6" # Dependency graph resolution
+semver = "1.0" # Version constraints
+tar = "0.4" # Backup/restore
+flate2 = "1.0" # Compression
+reqwest = { version = "0.11", features = ["blocking", "json"], optional = true } # Remote modules
+dirs = "5.0" # User directories
+
+[dev-dependencies]
+tempfile = "3.8"
+mockall = "0.12"
+proptest = "1.4"
+
+[features]
+default = ["lua-hooks", "gpg-signing"]
+lua-hooks = ["mlua"]
+gpg-signing = ["gpgme"]
+remote-modules = ["reqwest"]

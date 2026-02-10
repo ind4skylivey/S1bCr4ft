@@ -1,0 +1,19 @@
+id: "ai-ml/jupyter-lab"
+name: "JupyterLab Environment"
+description: "Interactive development environment for data science"
+category: "ai-ml"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - jupyterlab
+  - python-numpy
+  - python-pandas
+  - python-matplotlib
+  - python-scikit-learn
+  - python-pip
+aur_packages: []
+commands:
+  - jupyter lab --generate-config
+files: {}

@@ -1,0 +1,19 @@
+id: "linux-optimization/fonts/nerd-fonts"
+name: "Nerd Fonts Collection"
+description: "Popular Nerd Fonts for terminal and coding"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - ttf-jetbrains-mono-nerd
+  - ttf-firacode-nerd
+  - ttf-hack-nerd
+  - ttf-meslo-nerd
+aur_packages:
+  - ttf-iosevka-nerd
+  - ttf-cascadia-code-nerd
+commands:
+  - fc-cache -fv
+files: {}

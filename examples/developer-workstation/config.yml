@@ -1,0 +1,49 @@
+version: "1.0"
+name: "developer-workstation"
+description: "Complete development workstation with Hyprland and modern tools"
+
+modules:
+  # Core system
+  - core/base-system
+  - core/bootloader
+
+  # Window manager & display
+  - linux-optimization/window-managers/hyprland-config
+  - linux-optimization/display-managers/ly-config
+
+  # Terminal
+  - linux-optimization/terminal-emulators/alacritty-config
+  - linux-optimization/terminal-config/zsh
+  - linux-optimization/terminal-config/tmux-config
+  - linux-optimization/terminal-config/nvim-config
+
+  # Fonts & themes
+  - linux-optimization/fonts/nerd-fonts
+  - linux-optimization/themes/gtk-themes
+
+  # System tools
+  - linux-optimization/system-tools/cli-utilities
+  - linux-optimization/system-tools/file-managers
+  - linux-optimization/system-tools/network-tools
+
+  # Audio
+  - linux-optimization/audio/pipewire-setup
+
+  # Development
+  - development/languages/rust
+
+  # Browser
+  - linux-optimization/browsers/firefox-hardened
+
+  # Dotfiles
+  - linux-optimization/dotfiles/stow-manager
+
+options:
+  auto_backup: true
+  dry_run: false
+  parallel_install: true
+
+hooks:
+  post_sync: |
+    print("Developer workstation setup complete!")
+    print("Hyprland + Alacritty + Neovim ready to use")

@@ -1,0 +1,21 @@
+id: "ai-ml/cuda-toolkit"
+name: "NVIDIA CUDA Toolkit"
+description: "CUDA toolkit for GPU-accelerated computing"
+category: "ai-ml"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - cuda
+  - cudnn
+  - nvidia-utils
+  - nvidia-settings
+aur_packages: []
+commands:
+  - nvidia-smi
+files:
+  ~/.bashrc: |
+    # CUDA environment
+    export PATH=/opt/cuda/bin:$PATH
+    export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH

@@ -1,0 +1,227 @@
+# ============================================
+# S1bCr4ft - Production .gitignore
+# Protects internal code and documentation
+# ============================================
+
+# ==================== RUST BUILD ====================
+# Build artifacts
+target/
+**/*.rs.bk
+*.pdb
+
+# Cargo lock (keep for reproducible builds in production)
+# Cargo.lock is tracked for binaries
+
+# ==================== INTERNAL DOCUMENTATION ====================
+# Development notes and internal planning
+/production/
+/docs/internal/
+/notes/
+/planning/
+*.draft.md
+*-internal.md
+*-private.md
+ARCHITECTURE_INTERNAL.md
+IMPLEMENTATION_NOTES.md
+TODO_INTERNAL.md
+
+# Design documents and architecture diagrams
+/design/
+/diagrams/
+*.drawio
+*.excalidraw
+
+# Meeting notes and decisions
+/meetings/
+ADR-*.md
+DECISION-*.md
+
+# ==================== SECURITY & SECRETS ====================
+# API keys and secrets
+.env
+.env.local
+.env.*.local
+secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+*.gpg-key
+*.asc
+
+# Security audit reports (internal only)
+/security-audit/
+/penetration-tests/
+vulnerability-*.md
+
+# ==================== SOURCE CODE PROTECTION ====================
+# Advanced implementation details
+/crates/*/src/internal/
+/crates/*/src/proprietary/
+/crates/*/src/advanced/
+
+# Experimental features
+/experiments/
+/prototypes/
+/research/
+
+# Performance benchmarks and profiling
+/benchmarks/
+*.profraw
+*.profdata
+flamegraph*.svg
+perf.data*
+
+# ==================== TESTING ====================
+# Test artifacts
+/test-results/
+/coverage/
+*.gcda
+*.gcno
+*.lcov
+tarpaulin-report.html
+
+# Integration test data
+/test-data/private/
+/fixtures/internal/
+
+# ==================== IDE & EDITORS ====================
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA / RustRover
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ==================== OS FILES ====================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# ==================== LOGS & TEMPORARY FILES ====================
+# Application logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+
+# Cache
+.cache/
+*.cache
+
+# ==================== DATABASES ====================
+# SQLite databases (development only)
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# ==================== DEPLOYMENT & CI/CD ====================
+# Docker build context
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes secrets
+k8s/secrets/
+*.kubeconfig
+
+# Terraform state
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# ==================== PACKAGE MANAGERS ====================
+# Node (if used for tooling)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python (if used for scripts)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ==================== BACKUPS ====================
+# Backup files
+*.bak
+*.backup
+backup/
+backups/
+
+# ==================== CUSTOM S1bCr4ft ====================
+# User configurations (examples are tracked)
+/user-configs/
+/my-configs/
+
+# Downloaded modules (users should use module system)
+/downloaded-modules/
+
+# Build outputs for distribution (CI handles this)
+/dist/
+/release/
+*.tar.gz
+*.zip
+*.deb
+*.rpm
+
+# AUR package build artifacts
+/pkg/
+/src/
+*.pkg.tar.zst
+
+# ==================== ALLOW EXCEPTIONS ====================
+# Force include important files
+!.gitignore
+!.github/
+!LICENSE
+!README.md
+!CONTRIBUTING.md
+!Cargo.toml
+!Cargo.lock
+
+# Allow public examples and modules
+!examples/
+!modules/
+
+# Allow public documentation
+!docs/public/
+!docs/README.md

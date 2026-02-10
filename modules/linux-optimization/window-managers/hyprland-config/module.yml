@@ -1,0 +1,27 @@
+id: "linux-optimization/window-managers/hyprland-config"
+name: "Hyprland (Wayland Compositor)"
+description: "Modern Wayland compositor with animations and effects"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts:
+  - linux-optimization/window-managers/dwm-config
+  - linux-optimization/window-managers/i3-config
+  - linux-optimization/window-managers/bspwm-config
+packages:
+  - hyprland
+  - waybar
+  - wofi
+  - swaylock
+  - swayidle
+  - wl-clipboard
+  - grim
+  - slurp
+  - mako
+aur_packages:
+  - hyprpaper
+  - hyprpicker
+commands:
+  - mkdir -p ~/.config/hypr
+files: {}

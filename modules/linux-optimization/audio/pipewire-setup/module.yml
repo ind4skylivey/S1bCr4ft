@@ -1,0 +1,21 @@
+id: "linux-optimization/audio/pipewire-setup"
+name: "PipeWire Audio System"
+description: "Modern audio/video server replacing PulseAudio"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - pipewire
+  - pipewire-alsa
+  - pipewire-pulse
+  - pipewire-jack
+  - wireplumber
+  - pavucontrol
+aur_packages:
+  - helvum
+commands:
+  - systemctl --user enable pipewire.service
+  - systemctl --user enable wireplumber.service
+files: {}

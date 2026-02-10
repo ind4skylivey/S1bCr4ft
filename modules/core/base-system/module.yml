@@ -1,0 +1,22 @@
+id: "core/base-system"
+name: "Base System"
+description: "Essential Arch Linux base packages"
+category: "core"
+version: "1.0.0"
+dependencies: []
+conflicts: []
+packages:
+  - base
+  - base-devel
+  - linux
+  - linux-firmware
+  - sudo
+  - networkmanager
+  - git
+  - vim
+  - wget
+  - curl
+aur_packages: []
+commands:
+  - systemctl enable NetworkManager
+files: {}

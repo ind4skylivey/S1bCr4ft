@@ -1,0 +1,27 @@
+id: "linux-optimization/window-managers/i3-config"
+name: "i3 Window Manager"
+description: "i3wm with i3status and rofi launcher"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts:
+  - linux-optimization/window-managers/dwm-config
+  - linux-optimization/window-managers/hyprland-config
+  - linux-optimization/window-managers/bspwm-config
+packages:
+  - i3-wm
+  - i3status
+  - i3lock
+  - rofi
+  - feh
+  - picom
+  - xorg-server
+  - xorg-xinit
+aur_packages:
+  - i3-gaps
+  - polybar
+commands:
+  - echo "exec i3" > ~/.xinitrc
+  - mkdir -p ~/.config/i3
+files: {}

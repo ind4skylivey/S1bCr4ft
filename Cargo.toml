@@ -1,0 +1,73 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/s1bcr4ft-core",
+    "crates/s1bcr4ft-cli",
+    "crates/s1bcr4ft-tui",
+    "crates/s1bcr4ft-api",
+    "crates/s1bcr4ft-security",
+]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Livey <livey@s1b-team.dev>", "S1b-Team"]
+edition = "2021"
+rust-version = "1.75"
+license = "GPL-3.0"
+repository = "https://github.com/S1b-Team/S1bCr4ft"
+homepage = "https://s1bcr4ft.readthedocs.io"
+keywords = ["arch-linux", "configuration", "security", "red-team", "declarative"]
+categories = ["command-line-utilities", "config", "development-tools"]
+
+[workspace.dependencies]
+# Core dependencies
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+serde_json = "1.0"
+tokio = { version = "1.35", features = ["full"] }
+anyhow = "1.0"
+thiserror = "1.0"
+log = "0.4"
+env_logger = "0.11"
+
+# CLI dependencies
+clap = { version = "4.4", features = ["derive", "cargo", "env"] }
+colored = "2.1"
+indicatif = "0.17"
+dialoguer = "0.11"
+
+# TUI dependencies
+ratatui = "0.25"
+crossterm = "0.27"
+
+# API dependencies
+actix-web = "4.4"
+actix-cors = "0.7"
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite"] }
+jsonwebtoken = "9.2"
+
+# Security dependencies
+gpgme = "0.11"
+sha2 = "0.10"
+age = "0.10"
+
+# Scripting
+mlua = { version = "0.9", features = ["lua54", "vendored"] }
+
+# Utilities
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.6", features = ["v4", "serde"] }
+walkdir = "2.4"
+regex = "1.10"
+toml = "0.8"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true

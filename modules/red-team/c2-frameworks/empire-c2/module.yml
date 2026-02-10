@@ -1,0 +1,15 @@
+id: "red-team/c2-frameworks/empire-c2"
+name: "Empire C2 Framework"
+description: "PowerShell and Python post-exploitation framework"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - python
+  - python-pip
+aur_packages:
+  - powershell-empire
+commands: []
+files: {}

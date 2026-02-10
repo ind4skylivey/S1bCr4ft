@@ -1,0 +1,22 @@
+[package]
+name = "s1bcr4ft-security"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Security modules and hardening presets for S1bCr4ft"
+
+[dependencies]
+# Workspace dependencies
+serde = { workspace = true }
+serde_yaml = { workspace = true }
+anyhow = { workspace = true }
+log = { workspace = true }
+
+# Inter-crate dependencies
+s1bcr4ft-core = { path = "../s1bcr4ft-core" }
+
+[features]
+default = []

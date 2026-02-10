@@ -1,0 +1,23 @@
+id: "security/hardening/kernel-hardening"
+name: "Kernel Hardening"
+description: "Kernel security parameters and hardening"
+category: "security"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages: []
+aur_packages: []
+commands:
+  - sysctl -p /etc/sysctl.d/99-s1bcr4ft-hardening.conf
+files:
+  /etc/sysctl.d/99-s1bcr4ft-hardening.conf: |
+    # Kernel hardening parameters
+    kernel.kptr_restrict = 2
+    kernel.dmesg_restrict = 1
+    kernel.unprivileged_bpf_disabled = 1
+    kernel.unprivileged_userns_clone = 0
+    net.ipv4.conf.all.rp_filter = 1
+    net.ipv4.conf.default.rp_filter = 1
+    net.ipv4.conf.all.accept_source_route = 0
+    net.ipv4.conf.default.accept_source_route = 0

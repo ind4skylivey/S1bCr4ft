@@ -1,0 +1,18 @@
+id: "development/languages/rust"
+name: "Rust Development"
+description: "Rust toolchain with cargo and rustup"
+category: "development"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - rustup
+  - rust-analyzer
+aur_packages:
+  - cargo-edit
+  - cargo-watch
+commands:
+  - rustup default stable
+  - rustup component add clippy rustfmt
+files: {}

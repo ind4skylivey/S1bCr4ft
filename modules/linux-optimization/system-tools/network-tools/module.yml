@@ -1,0 +1,23 @@
+id: "linux-optimization/system-tools/network-tools"
+name: "Network Utilities"
+description: "Essential networking tools and utilities"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - net-tools
+  - inetutils
+  - bind
+  - traceroute
+  - whois
+  - wget
+  - curl
+  - rsync
+  - openssh
+  - wireguard-tools
+aur_packages:
+  - speedtest-cli
+commands: []
+files: {}

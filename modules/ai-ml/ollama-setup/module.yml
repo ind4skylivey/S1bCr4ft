@@ -1,0 +1,17 @@
+id: "ai-ml/ollama-setup"
+name: "Ollama Local LLM"
+description: "Run large language models locally with Ollama"
+category: "ai-ml"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages: []
+aur_packages:
+  - ollama
+commands:
+  - systemctl enable ollama
+  - systemctl start ollama
+  - ollama pull llama2
+  - ollama pull codellama
+files: {}

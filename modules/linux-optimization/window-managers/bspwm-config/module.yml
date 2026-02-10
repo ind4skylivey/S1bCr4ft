@@ -1,0 +1,26 @@
+id: "linux-optimization/window-managers/bspwm-config"
+name: "BSPWM (Binary Space Partitioning WM)"
+description: "Tiling window manager with sxhkd hotkey daemon"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts:
+  - linux-optimization/window-managers/dwm-config
+  - linux-optimization/window-managers/i3-config
+  - linux-optimization/window-managers/hyprland-config
+packages:
+  - bspwm
+  - sxhkd
+  - rofi
+  - polybar
+  - picom
+  - feh
+  - xorg-server
+  - xorg-xinit
+aur_packages: []
+commands:
+  - echo "exec bspwm" > ~/.xinitrc
+  - mkdir -p ~/.config/bspwm
+  - mkdir -p ~/.config/sxhkd
+files: {}

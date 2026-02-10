@@ -1,0 +1,17 @@
+id: "linux-optimization/display-managers/lightdm-config"
+name: "LightDM Display Manager"
+description: "Lightweight display manager with GTK greeter"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts:
+  - linux-optimization/display-managers/ly-config
+packages:
+  - lightdm
+  - lightdm-gtk-greeter
+aur_packages:
+  - lightdm-webkit2-greeter
+commands:
+  - systemctl enable lightdm.service
+files: {}

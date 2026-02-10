@@ -1,0 +1,35 @@
+[package]
+name = "s1bcr4ft-cli"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Command-line interface for S1bCr4ft"
+
+[[bin]]
+name = "s1bcr4ft"
+path = "src/main.rs"
+
+[dependencies]
+# Workspace dependencies
+clap = { workspace = true }
+colored = { workspace = true }
+indicatif = { workspace = true }
+anyhow = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Inter-crate dependencies
+s1bcr4ft-core = { path = "../s1bcr4ft-core" }
+
+# CLI-specific dependencies
+console = "0.15"
+comfy-table = "7.1"
+dialoguer = { workspace = true }
+
+[features]
+default = []

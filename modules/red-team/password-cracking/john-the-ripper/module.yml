@@ -1,0 +1,14 @@
+id: "red-team/password-cracking/john-the-ripper"
+name: "John the Ripper"
+description: "Fast password cracker with community rules"
+category: "red-team"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - john
+aur_packages:
+  - john-jumbo
+commands: []
+files: {}

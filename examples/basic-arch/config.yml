@@ -1,0 +1,14 @@
+version: "1.0"
+name: "basic-arch"
+description: "Minimal Arch Linux setup with essentials"
+
+modules:
+  - core/base-system
+  - core/bootloader
+  - development/languages/rust
+  - linux-optimization/terminal-config/zsh
+
+options:
+  auto_backup: true
+  dry_run: false
+  parallel_install: true

@@ -1,0 +1,18 @@
+id: "linux-optimization/system-tools/file-managers"
+name: "File Managers Collection"
+description: "Terminal and GUI file managers"
+category: "linux-optimization"
+version: "1.0.0"
+dependencies:
+  - core/base-system
+conflicts: []
+packages:
+  - ranger
+  - lf
+  - mc
+  - thunar
+  - pcmanfm
+aur_packages:
+  - yazi
+commands: []
+files: {}
