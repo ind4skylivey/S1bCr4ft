@@ -7,6 +7,9 @@ members = [
     "crates/s1bcr4ft-api",
     "crates/s1bcr4ft-security",
 ]
+exclude = [
+    "fuzz",
+]
 
 [workspace.package]
 version = "0.1.0"

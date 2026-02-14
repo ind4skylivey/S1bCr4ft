@@ -70,6 +70,11 @@ impl S1bCr4ftError {
     pub fn validation<S: Into<String>>(msg: S) -> Self {
         Self::Validation(msg.into())
     }
+
+    #[cfg(feature = "gpg-signing")]
+    pub fn gpg<S: Into<String>>(msg: S) -> Self {
+        Self::Gpg(msg.into())
+    }
 }
 
 // Missing audit error variant - need to add it to the enum

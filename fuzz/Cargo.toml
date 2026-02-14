@@ -1,0 +1,30 @@
+[package]
+name = "s1bcr4ft-core-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.s1bcr4ft-core]
+path = "../crates/s1bcr4ft-core"
+
+# Fuzz target 1: CommandValidator::parse() fuzzing
+[[bin]]
+name = "command_validator"
+path = "fuzz_targets/command_validator.rs"
+test = false
+doc = false
+bench = false
+
+# Fuzz target 2: CommandValidator::validate() fuzzing
+[[bin]]
+name = "command_validator_validate"
+path = "fuzz_targets/command_validator_validate.rs"
+test = false
+doc = false
+bench = false

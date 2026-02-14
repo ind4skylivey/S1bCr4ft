@@ -112,7 +112,7 @@ fn run_app<B: ratatui::backend::Backend>(
             f.render_widget(header, chunks[0]);
 
             // Tabs
-            let tabs = vec![
+            let tabs = [
                 ("1", "Modules"),
                 ("2", "Config"),
                 ("3", "Status"),
@@ -189,7 +189,7 @@ fn run_app<B: ratatui::backend::Backend>(
 }
 
 fn render_modules_tab(f: &mut ratatui::Frame, area: ratatui::layout::Rect) {
-    let items: Vec<ListItem> = vec![
+    let items: Vec<ListItem> = [
         "core/base-system",
         "core/bootloader",
         "development/languages/rust",
@@ -274,7 +274,7 @@ fn render_status_tab(f: &mut ratatui::Frame, area: ratatui::layout::Rect) {
 }
 
 fn render_audit_tab(f: &mut ratatui::Frame, area: ratatui::layout::Rect) {
-    let audit_entries = vec![
+    let audit_entries = [
         "[2024-02-04 20:15:32] sync - SUCCESS - Installed 15 packages",
         "[2024-02-04 19:45:12] backup_create - SUCCESS - Backup created: abc123",
         "[2024-02-04 18:30:45] module_add - SUCCESS - Added hyprland-config",

@@ -10,21 +10,25 @@
 //! - Audit logging with GPG signing
 //! - Lua scripting for hooks
 
+pub mod audit;
+pub mod backup;
+pub mod command_validator;
 pub mod config;
+pub mod error;
+pub mod gpg;
+pub mod hooks;
 pub mod module;
 pub mod package;
-pub mod backup;
-pub mod audit;
-pub mod hooks;
 pub mod validation;
-pub mod error;
 
+pub use audit::{AuditEntry, AuditLogger};
+pub use backup::{BackupId, BackupManager};
+pub use command_validator::CommandValidator;
 pub use config::{Config, ConfigLoader};
-pub use module::{Module, ModuleResolver, ModuleRegistry};
-pub use package::{PackageManager, SyncOptions, SyncReport};
-pub use backup::{BackupManager, BackupId};
-pub use audit::{AuditLogger, AuditEntry};
 pub use error::{Result, S1bCr4ftError};
+pub use gpg::GpgVerifier;
+pub use module::{Module, ModuleRegistry, ModuleResolver};
+pub use package::{PackageManager, SyncOptions, SyncReport};
 
 /// S1bCr4ft version
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");
