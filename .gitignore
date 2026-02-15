@@ -225,3 +225,4 @@ backups/
 # Allow public documentation
 !docs/public/
 !docs/README.md
+ZED_GODMODE_CHEATSHEET.md
