@@ -1,0 +1,31 @@
+# Codecov configuration for S1bCr4ft
+# https://docs.codecov.com/docs/codecov-yaml
+
+coverage:
+  status:
+    project:
+      default:
+        target: 80%
+        threshold: 5%
+        if_ci_failed: error
+    patch:
+      default:
+        target: 80%
+        threshold: 5%
+
+# Ignore test files in coverage
+ignore:
+  - "tests/**"
+  - "*/tests/**"
+  - "**/*_test.rs"
+  - "**/test_*.rs"
+
+# Comment configuration
+comment:
+  layout: "reach,diff,flags,files,footer"
+  behavior: default
+  require_changes: false
+
+# GitHub checks
+github_checks:
+  annotations: true
